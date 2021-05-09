@@ -1,4 +1,24 @@
 extends ./base.pug
 
     block cnetent
-        h1 Hello home
+        section.home
+            .home__left
+            .home__center.hc
+
+                .hc__buttonArea
+                    form(action="/create" method="GET")
+                        input(type="submit" value="Write")
+                    ul.hc__dataList
+                        li 번호
+                        li 제목
+                        li 작성자
+                        li 작성일
+
+                    ul.hc__list
+                        li 1
+                        li
+                            form(action="/detail" method="GET")
+                                input(type="hidden" name="id" )
+                                input(type="submit")
+
+            .home__right

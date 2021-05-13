@@ -32,6 +32,31 @@ export const createController = (req, res) => {
   res.render("create");
 };
 
-export const editController = (req, res) => {
-  res.render("edit");
+export const boardCoreateController = async (req, res) => {
+  const {
+    body: { title, author, desc },
+  } = req;
+
+  try {
+    const D = new Date();
+    let year = D.getFullYear();
+    let month = D.getMonth() + 1;
+    let date = D.getUTCDate();
+
+    month = month < 10 ? `0${month}` : month;
+    date = date < 10 ? `0${date}` : date;
+
+    const result = await Board.create({
+      title: title,
+      description: desc,
+      author: author,
+      created: resutlDate,
+    });
+    homeController(req, res);
+  } catch (e) {
+    console.log(error);
+    homeController(req, res);
+  }
 };
+
+export const editController = async (req, res) => {};

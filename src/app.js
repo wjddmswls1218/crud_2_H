@@ -3,6 +3,7 @@ import path from "path";
 import helmet from "helmet";
 import morgan from "morgan";
 import bodyParser from "body-parser";
+import connect from "../db";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -16,6 +17,9 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/assets")));
+connect();
+
+app.use("/", BoardRouter);
 
 app.listen(PORT, () => {
   console.log(` 🐳 ${PORT} Server Start`);

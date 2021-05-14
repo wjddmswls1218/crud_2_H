@@ -4,6 +4,7 @@ import {
   detailController,
   editController,
 } from "../controllers/boardController";
+import express from "express";
 
 const boardRouter = express.Router();
 

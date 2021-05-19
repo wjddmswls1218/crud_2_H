@@ -60,3 +60,7 @@ export const boardCoreateController = async (req, res) => {
 };
 
 export const editController = async (req, res) => {};
+
+export const detailBoardController = (async(req, res) = {});
+
+export const editBoardController = (req, res) => {};

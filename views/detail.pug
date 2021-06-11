@@ -1,23 +1,23 @@
 extends ./base.pug
 
-    block cnetent
-        form.writeForm(action="#" method="POST")
-            .writeWrapper
-                .writeWrapper__quird title
-                .writeWrapper__content
-                    ipnut(type="text" name="title")
-            .writeWrapper
-                .writeWrapper__quird author
-                .writeWrapper__content
-                    ipnut(type="text" name="author")
+block content
+    form.writeForm(action="#" method="POST")
+        .writeWrapper
+            .writeWrapper__quird title
+            .writeWrapper__content
+                ipnut(type="text" name="title")
+        .writeWrapper
+            .writeWrapper__quird author
+            .writeWrapper__content
+                ipnut(type="text" name="author")
 
-            .writeWrapper
-                .writeWrapper__quird description
-                .writeWrapper__content
-                    ipnut(type="text" name="desc")
+        .writeWrapper
+            .writeWrapper__quird description
+            .writeWrapper__content
+                ipnut(type="text" name="desc")
             
-        form.listForm(action="/" method="GET")
-            input(type="submit" value="LIST")
+    form.listForm(action="/" method="GET")
+        input(type="submit" value="LIST")
 
 
             

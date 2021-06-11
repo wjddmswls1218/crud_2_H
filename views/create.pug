@@ -1,24 +1,24 @@
 extends ./base.pug
 
-    block cnetent
-        form.writeForm(action="/createBoard" method="POST")
-            .writeWrapper
-                .writeWrapper__quire  Title
-                .writeWrapper__content 
-                    input(type="text" name="title")    
+block content
+    form.writeForm(action="/createBoard" method="POST")
+        .writeWrapper
+            .writeWrapper__quire  Title
+            .writeWrapper__content 
+                input(type="text" name="title")    
 
-            .writeWrapper
-                .writeWrapper__quire  Author
-                .writeWrapper__content 
-                    input(type="text" name="author") 
+        .writeWrapper
+            .writeWrapper__quire  Author
+            .writeWrapper__content 
+                input(type="text" name="author") 
 
-            .writeWrapper
-                .writeWrapper__quire  Desc
-                .writeWrapper__content 
-                    input(type="text" name="description")
+        .writeWrapper
+            .writeWrapper__quire  Desc
+            .writeWrapper__content 
+                input(type="text" name="description")
                 
-            .buttonArea
-                .descWrapper
-                    input(type="submit" value="WRITE")
-        form.listForm(action="/" method="GET")
-            input(type="submit" value="LIST")
+        .buttonArea
+            .descWrapper
+                input(type="submit" value="WRITE")
+    form.listForm(action="/" method="GET")
+        input(type="submit" value="LIST")
